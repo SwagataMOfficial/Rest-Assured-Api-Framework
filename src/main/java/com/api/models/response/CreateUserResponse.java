@@ -38,7 +38,7 @@ public class CreateUserResponse {
 		
 		@Override
 		public String toString() {
-			return "CreateUserResponse [code=" + code + ", type=" + type + ", message=" + message + "]";
-		}		
+			return "CreateUserResponse [code=" + code + ", type=" + type + ", message=" + message + "]\n";
+		}
 	
 }

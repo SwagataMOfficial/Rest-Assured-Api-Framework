@@ -1,6 +1,8 @@
 package com.api.models.request;
 
-public class CreateUserRequest {
+
+public class CreateUserRequest 
+{
 
 	private String id;
 	private String username;
@@ -95,6 +97,69 @@ public class CreateUserRequest {
 				+ userStatus + "]";
 	}
 	
-	
+	public static class Builder
+	{
+		private String id;
+		private String username;
+		private String firstName;
+		private String lastName;
+		private String email;
+		private String password;
+		private String phone;
+		private String userStatus;
+		
+		public Builder id(String id)
+		{
+			this.id = id;
+			return this;
+		}
+		
+		public Builder userName(String username)
+		{
+			this.username = username;
+			return this;
+		}
+		
+		public Builder firstName(String firstName)
+		{
+			this.firstName = firstName;
+			return this;
+		}
+		
+		public Builder lastName(String lastName)
+		{
+			this.lastName = lastName;
+			return this;
+		}
+		
+		public Builder email(String email)
+		{
+			this.email = email;
+			return this;
+		}
+		
+		public Builder password(String password)
+		{
+			this.password = password;
+			return this;
+		}
+		
+		public Builder phone(String phone)
+		{
+			this.phone = phone;
+			return this;
+		}
+		
+		public Builder userStatus(String userStatus)
+		{
+			this.userStatus = userStatus;
+			return this;
+		}
+		
+		public CreateUserRequest build()
+		{
+			return new CreateUserRequest(id, username, firstName, lastName, email, password, phone, userStatus);
+		}
+	}
 
 }
